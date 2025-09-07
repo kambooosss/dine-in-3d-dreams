@@ -22,7 +22,7 @@ const Hero = () => {
                 </span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-                Transform your restaurant with interactive QR menu cards that create immersive dining experiences. Watch food items pop out in 3D when customers scan!
+                Transform your restaurant with interactive QR menu cards that create seamless digital dining experiences. Engage customers with beautifully designed, easy-to-scan menus.
               </p>
             </div>
             
