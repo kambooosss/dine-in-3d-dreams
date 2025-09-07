@@ -30,7 +30,7 @@ const Navigation = () => {
             <div className="w-10 h-10 gradient-primary rounded-xl flex items-center justify-center">
               <QrCode className="h-6 w-6 text-white" />
             </div>
-            <span className="font-display text-xl font-bold text-foreground">QR Menu Magic</span>
+            <span className="font-display text-xl font-bold text-foreground">QRKaro</span>
           </div>
 
           {/* Desktop Navigation */}

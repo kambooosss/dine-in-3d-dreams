@@ -32,7 +32,7 @@ const About = () => {
           <h2 className="font-display text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Why Restaurants Need 
             <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              QR Menu Magic
+              QRKaro
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">

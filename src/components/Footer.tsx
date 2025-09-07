@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
                 <QrCode className="h-5 w-5 text-primary" />
               </div>
-              <span className="font-display text-lg font-bold">QR Menu Magic</span>
+              <span className="font-display text-lg font-bold">QRKaro</span>
             </div>
             <p className="text-white/80 text-sm leading-relaxed">
               Transforming restaurants with interactive QR menu experiences that delight customers and boost business.
@@ -50,7 +50,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>hello@qrmenumagic.com</span>
+                <span>hello@qrkaro.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
@@ -62,7 +62,7 @@ const Footer = () => {
 
         <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm">
-            © 2024 QR Menu Magic. All rights reserved.
+            © 2024 QRKaro. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm text-white/80 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-smooth">Privacy Policy</a>
