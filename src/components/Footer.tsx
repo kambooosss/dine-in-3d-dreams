@@ -1,4 +1,4 @@
-import { QrCode, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -8,9 +8,11 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                <QrCode className="h-5 w-5 text-primary" />
-              </div>
+              <img 
+                src="/qrkaro-logo.png" 
+                alt="QRKaro Logo" 
+                className="w-8 h-8 object-contain bg-white rounded-lg p-1"
+              />
               <span className="font-display text-lg font-bold">QRKaro</span>
             </div>
             <p className="text-white/80 text-sm leading-relaxed">
