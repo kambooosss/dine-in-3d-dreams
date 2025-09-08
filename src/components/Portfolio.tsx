@@ -56,30 +56,30 @@ const Portfolio = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-background to-muted/30">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="font-display text-4xl lg:text-5xl font-bold text-foreground mb-6">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-background to-muted/30">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 lg:mb-6">
             Our Portfolio
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
             Discover how we've transformed dining experiences for restaurants across different cuisines and styles.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {projects.map((project, index) => (
             <Card 
               key={index}
               className="group hover:shadow-primary transition-smooth cursor-pointer border-0 shadow-lg overflow-hidden"
             >
               <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                <div className="text-6xl opacity-20">🍽️</div>
+                <div className="text-4xl lg:text-6xl opacity-20">🍽️</div>
               </div>
-              <CardContent className="p-6">
+              <CardContent className="p-4 lg:p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h3 className="font-display text-xl font-semibold text-foreground mb-1">
+                    <h3 className="font-display text-lg lg:text-xl font-semibold text-foreground mb-1">
                       {project.title}
                     </h3>
                     <Badge variant="secondary" className="text-xs">
@@ -95,7 +95,7 @@ const Portfolio = () => {
                   </Button>
                 </div>
                 
-                <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4 lg:mb-6">
                   {project.description}
                 </p>
                 
@@ -109,7 +109,7 @@ const Portfolio = () => {
                   </div>
                 </div>
                 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1 lg:gap-2">
                   {project.features.map((feature, featureIndex) => (
                     <Badge 
                       key={featureIndex}
@@ -125,7 +125,7 @@ const Portfolio = () => {
           ))}
         </div>
 
-        <div className="text-center mt-16">
+        <div className="text-center mt-12 lg:mt-16">
           <Button 
             size="lg"
             className="gradient-primary text-white shadow-primary hover:shadow-glow transition-smooth"

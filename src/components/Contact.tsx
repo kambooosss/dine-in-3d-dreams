@@ -63,25 +63,25 @@ const Contact = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="font-display text-4xl lg:text-5xl font-bold text-foreground mb-6">
+    <section className="py-12 sm:py-16 lg:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 lg:mb-6">
             Start Your QR Menu Project
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
             Ready to transform your restaurant's dining experience? Let's create something amazing together.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Form */}
           <Card className="shadow-primary border-0">
             <CardHeader>
-              <CardTitle className="font-display text-2xl">Get Your Quote</CardTitle>
+              <CardTitle className="font-display text-xl lg:text-2xl">Get Your Quote</CardTitle>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="name">Restaurant Name *</Label>
@@ -175,17 +175,17 @@ const Contact = () => {
 
           {/* Contact Information */}
           <div className="space-y-8">
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-2 gap-4 lg:gap-6">
               {contactInfo.map((info, index) => {
                 const Icon = info.icon;
                 return (
                   <Card key={index} className="border-0 shadow-lg hover:shadow-secondary transition-smooth">
-                    <CardContent className="p-6 text-center">
+                    <CardContent className="p-4 lg:p-6 text-center">
                       <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4">
                         <Icon className="h-6 w-6 text-white" />
                       </div>
-                      <h3 className="font-semibold text-foreground mb-2">{info.title}</h3>
-                      <p className="text-sm text-primary font-medium mb-1">{info.details}</p>
+                      <h3 className="font-semibold text-foreground mb-2 text-sm lg:text-base">{info.title}</h3>
+                      <p className="text-xs lg:text-sm text-primary font-medium mb-1">{info.details}</p>
                       <p className="text-xs text-muted-foreground">{info.subtitle}</p>
                     </CardContent>
                   </Card>
@@ -195,20 +195,20 @@ const Contact = () => {
 
             {/* FAQ Quick Links */}
             <Card className="border-0 shadow-lg gradient-secondary text-white">
-              <CardContent className="p-8">
-                <h3 className="font-display text-xl font-bold mb-4">Frequently Asked Questions</h3>
-                <div className="space-y-4 text-sm">
+              <CardContent className="p-6 lg:p-8">
+                <h3 className="font-display text-lg lg:text-xl font-bold mb-4">Frequently Asked Questions</h3>
+                <div className="space-y-3 lg:space-y-4 text-sm">
                   <div>
                     <strong>How long does it take?</strong>
-                    <p className="opacity-90">Most projects are completed within 24-48 hours.</p>
+                    <p className="opacity-90 text-xs lg:text-sm">Most projects are completed within 24-48 hours.</p>
                   </div>
                   <div>
                     <strong>Do you provide printing?</strong>
-                    <p className="opacity-90">Yes! We provide print-ready files and can arrange printing.</p>
+                    <p className="opacity-90 text-xs lg:text-sm">Yes! We provide print-ready files and can arrange printing.</p>
                   </div>
                   <div>
                     <strong>Can you integrate with our POS?</strong>
-                    <p className="opacity-90">Absolutely! We work with all major POS systems.</p>
+                    <p className="opacity-90 text-xs lg:text-sm">Absolutely! We work with all major POS systems.</p>
                   </div>
                 </div>
               </CardContent>
