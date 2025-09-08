@@ -27,11 +27,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img 
-              src="/qrkaro-logo.png" 
-              alt="QRKaro Logo" 
-              className="w-10 h-10 object-contain"
-            />
+            <div className="w-10 h-10 gradient-primary rounded-xl flex items-center justify-center">
+              <QrCode className="h-6 w-6 text-white" />
+            </div>
             <span className="font-display text-xl font-bold text-foreground">QRKaro</span>
           </div>
 
