@@ -2,9 +2,9 @@ import { QrCode, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="gradient-hero text-white py-12 lg:py-16">
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-6 lg:mb-8">
+    <footer className="gradient-hero text-white py-16">
+      <div className="container mx-auto px-6">
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -13,14 +13,14 @@ const Footer = () => {
               </div>
               <span className="font-display text-lg font-bold">QRKaro</span>
             </div>
-            <p className="text-white/80 text-sm leading-relaxed pr-4">
+            <p className="text-white/80 text-sm leading-relaxed">
               Transforming restaurants with interactive QR menu experiences that delight customers and boost business.
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-base lg:text-lg mb-3 lg:mb-4">Services</h3>
+            <h3 className="font-semibold text-lg mb-4">Services</h3>
             <ul className="space-y-2 text-sm text-white/80">
               <li><a href="#" className="hover:text-white transition-smooth">QR Menu Design</a></li>
               <li><a href="#" className="hover:text-white transition-smooth">Interactive Menus</a></li>
@@ -31,7 +31,7 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold text-base lg:text-lg mb-3 lg:mb-4">Company</h3>
+            <h3 className="font-semibold text-lg mb-4">Company</h3>
             <ul className="space-y-2 text-sm text-white/80">
               <li><a href="#" className="hover:text-white transition-smooth">About Us</a></li>
               <li><a href="#" className="hover:text-white transition-smooth">Our Team</a></li>
@@ -42,7 +42,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold text-base lg:text-lg mb-3 lg:mb-4">Contact</h3>
+            <h3 className="font-semibold text-lg mb-4">Contact</h3>
             <div className="space-y-3 text-sm text-white/80">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
@@ -60,11 +60,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/20 pt-6 lg:pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm">
             © 2024 QRKaro. All rights reserved.
           </p>
-          <div className="flex flex-wrap justify-center space-x-4 lg:space-x-6 text-sm text-white/80">
+          <div className="flex space-x-6 text-sm text-white/80 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-smooth">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-smooth">Terms of Service</a>
             <a href="#" className="hover:text-white transition-smooth">Cookie Policy</a>

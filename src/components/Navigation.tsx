@@ -22,19 +22,19 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border">
-      <div className="container mx-auto px-4 sm:px-6">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+      <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 gradient-primary rounded-xl flex items-center justify-center">
               <QrCode className="h-6 w-6 text-white" />
             </div>
-            <span className="font-display text-lg sm:text-xl font-bold text-foreground">QRKaro</span>
+            <span className="font-display text-xl font-bold text-foreground">QRKaro</span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.href}
@@ -47,18 +47,14 @@ const Navigation = () => {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center space-x-3 xl:space-x-4">
+          <div className="hidden md:flex items-center space-x-4">
             <Button 
               variant="outline"
-              size="sm"
               className="border-primary text-primary hover:gradient-primary hover:text-white transition-smooth"
             >
               Login
             </Button>
-            <Button 
-              size="sm"
-              className="gradient-primary text-white shadow-primary hover:shadow-glow transition-smooth"
-            >
+            <Button className="gradient-primary text-white shadow-primary hover:shadow-glow transition-smooth">
               Get Started
             </Button>
           </div>
@@ -66,8 +62,8 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"
-            size="icon"
-            className="lg:hidden"
+            size="sm"
+            className="md:hidden"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -76,7 +72,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-border bg-background/95 backdrop-blur-lg">
+          <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <button
@@ -87,7 +83,7 @@ const Navigation = () => {
                   {item.label}
                 </button>
               ))}
-              <div className="flex flex-col space-y-3 pt-4 border-t border-border/50">
+              <div className="flex flex-col space-y-2 pt-4">
                 <Button 
                   variant="outline"
                   className="border-primary text-primary hover:gradient-primary hover:text-white transition-smooth"
