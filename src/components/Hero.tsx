@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Smartphone, QrCode } from "lucide-react";
 import heroImage from "@/assets/hero-restaurant-table.jpg";
 import floatingFood from "@/assets/floating-food-items.png";
+import qrLogo from "@/assets/LOGO3.png";
 
 const Hero = () => {
   return (
@@ -27,13 +28,13 @@ const Hero = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button 
+              {/* <Button 
                 size="lg" 
                 className="gradient-primary text-white shadow-primary hover:shadow-glow transition-smooth group"
               >
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth" />
-              </Button>
+              </Button> */}
               <Button 
                 variant="outline" 
                 size="lg"
@@ -73,8 +74,9 @@ const Hero = () => {
               {/* Scanning Animation Overlay */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 <div className="relative">
-                  <QrCode className="h-16 w-16 text-primary animate-pulse-glow" />
-                  <div className="absolute -inset-4 border-2 border-primary rounded-lg animate-pulse" />
+                  {/* <QrCode className="h-16 w-16 text-primary animate-pulse-glow" />
+                  <div className="absolute -inset-4 border-2 border-primary rounded-lg animate-pulse" /> */}
+                  
                 </div>
               </div>
             </div>
@@ -84,7 +86,7 @@ const Hero = () => {
               <img 
                 src={floatingFood} 
                 alt="3D floating food items"
-                className="w-full h-full animate-float"
+                className="w-full h-full animate-float rounded-xl"
               />
             </div>
             

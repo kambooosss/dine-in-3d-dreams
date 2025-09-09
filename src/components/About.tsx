@@ -67,7 +67,7 @@ const About = () => {
           })}
         </div>
 
-        <div className="mt-12 lg:mt-20 text-center">
+        {/* <div className="mt-12 lg:mt-20 text-center">
           <div className="grid sm:grid-cols-3 gap-6 lg:gap-8 max-w-4xl mx-auto">
             <div className="space-y-4">
               <div className="text-3xl lg:text-4xl font-bold gradient-primary bg-clip-text text-transparent">
@@ -94,7 +94,7 @@ const About = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -75,9 +75,14 @@ const Services = () => {
                   <Button 
                     variant="outline" 
                     className="w-full border-primary text-primary hover:gradient-primary hover:text-white transition-smooth group"
+                    disabled={index === 2}
                   >
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-smooth" />
+                    
+                    {index === 2 ? "Comming Soon" : "Learn More" }
+                    {/* <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-smooth" /> */}
+                    {index !== 2 && ( // 👈 only show arrow if it's NOT the second card
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-smooth" />
+                    )}
                   </Button>
                 </CardContent>
               </Card>

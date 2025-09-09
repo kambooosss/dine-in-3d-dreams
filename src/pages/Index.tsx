@@ -24,9 +24,9 @@ const Index = () => {
           <Services />
         </section>
         
-        <section id="portfolio">
+        {/* <section id="portfolio">
           <Portfolio />
-        </section>
+        </section> */}
         
         <section id="contact">
           <Contact />

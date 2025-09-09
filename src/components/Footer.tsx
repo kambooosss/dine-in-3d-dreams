@@ -1,4 +1,5 @@
 import { QrCode, Mail, Phone, MapPin } from "lucide-react";
+import qrLogo from "@/assets/LOGO3.png";
 
 const Footer = () => {
   return (
@@ -8,8 +9,13 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                <QrCode className="h-5 w-5 text-primary" />
+              <div className="w-15 h-15  rounded-xl flex items-center justify-center">
+                {/* <QrCode className="h-5 w-5 text-primary" /> */}
+                <img
+                    src={qrLogo}
+                    alt="QR Logo"
+                    className="h-12 w-12 object-contain "
+                />
               </div>
               <span className="font-display text-lg font-bold">QRKaro</span>
             </div>
@@ -25,7 +31,7 @@ const Footer = () => {
               <li><a href="#" className="hover:text-white transition-smooth">QR Menu Design</a></li>
               <li><a href="#" className="hover:text-white transition-smooth">Interactive Menus</a></li>
               <li><a href="#" className="hover:text-white transition-smooth">Brand Integration</a></li>
-              <li><a href="#" className="hover:text-white transition-smooth">POS Integration</a></li>
+              {/* <li><a href="#" className="hover:text-white transition-smooth">POS Integration</a></li> */}
             </ul>
           </div>
 
@@ -34,7 +40,7 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Company</h3>
             <ul className="space-y-2 text-sm text-white/80">
               <li><a href="#" className="hover:text-white transition-smooth">About Us</a></li>
-              <li><a href="#" className="hover:text-white transition-smooth">Our Team</a></li>
+              {/* <li><a href="#" className="hover:text-white transition-smooth">Our Team</a></li> */}
               <li><a href="#" className="hover:text-white transition-smooth">Case Studies</a></li>
               <li><a href="#" className="hover:text-white transition-smooth">Blog</a></li>
             </ul>

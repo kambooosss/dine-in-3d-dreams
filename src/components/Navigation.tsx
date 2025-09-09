@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, QrCode } from "lucide-react";
+import qrLogo from "@/assets/LOGO3.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,7 @@ const Navigation = () => {
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#services", label: "Services" },
-    { href: "#portfolio", label: "Portfolio" },
+    // { href: "#portfolio", label: "Portfolio" },
     { href: "#contact", label: "Contact" }
   ];
 
@@ -28,7 +29,12 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 gradient-primary rounded-xl flex items-center justify-center">
-              <QrCode className="h-6 w-6 text-white" />
+              {/* <QrCode className="h-6 w-6 text-white" /> */}
+              <img
+                    src={qrLogo}
+                    alt="QR Logo"
+                    className="h-15 w-15 object-contain animate-pulse-glow"
+                />
             </div>
             <span className="font-display text-xl font-bold text-foreground">QRKaro</span>
           </div>
@@ -48,13 +54,14 @@ const Navigation = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button 
+            {/* <Button 
               variant="outline"
               className="border-primary text-primary hover:gradient-primary hover:text-white transition-smooth"
             >
               Login
-            </Button>
-            <Button className="gradient-primary text-white shadow-primary hover:shadow-glow transition-smooth">
+            </Button> */}
+            <Button className="gradient-primary text-white shadow-primary hover:shadow-glow transition-smooth"
+            onClick={() => scrollToSection("#contact")}>
               Get Started
             </Button>
           </div>
