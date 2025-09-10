@@ -3,8 +3,22 @@ import { ArrowRight, Smartphone, QrCode } from "lucide-react";
 import heroImage from "@/assets/hero-restaurant-table.jpg";
 import floatingFood from "@/assets/floating-food-items.png";
 import qrLogo from "@/assets/LOGO3.png";
+import GalleryModal from "@/components/GalleryModal"; // 👈 import modal
+import { useState } from "react";  // ✅ this line is required
+
+
+// Example images (replace with your real images)
+import ex1 from "@/assets/floating-food-items.png";
+import ex2 from "@/assets/floating-food-items.png";
+import ex3 from "@/assets/LOGO3.png";
+import ex4 from "@/assets/floating-food-items.png";
+import ex5 from "@/assets/floating-food-items.png";
+import ex6 from "@/assets/floating-food-items.png";
 
 const Hero = () => {
+  const [showGallery, setShowGallery] = useState(false);
+
+  const galleryImages = [ex1, ex2, ex3, ex4, ex5, ex6];
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Gradient */}
@@ -39,6 +53,7 @@ const Hero = () => {
                 variant="outline" 
                 size="lg"
                 className="border-primary text-primary hover:gradient-primary hover:text-white transition-smooth"
+                onClick={() => setShowGallery(true)} // 👈 open gallery
               >
                 View Examples
               </Button>
@@ -104,6 +119,13 @@ const Hero = () => {
       <div className="absolute top-20 left-10 w-6 h-6 bg-primary rounded-full animate-float opacity-60 hidden lg:block" />
       <div className="absolute bottom-32 right-20 w-8 h-8 bg-secondary rounded-full animate-float-delayed opacity-40 hidden lg:block" />
       <div className="absolute top-1/2 left-20 w-4 h-4 bg-accent rounded-full animate-float opacity-50 hidden lg:block" />
+
+      {/* 👇 Gallery Modal */}
+      <GalleryModal 
+        open={showGallery}
+        onClose={() => setShowGallery(false)}
+        images={galleryImages}
+      />
     </section>
   );
 };

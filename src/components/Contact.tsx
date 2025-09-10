@@ -278,7 +278,32 @@ const Contact = () => {
       });
     }
   };
-
+  const contactInfo = [
+        {
+          icon: Phone,
+          title: "Call Us",
+          details: "+1 (555) 123-4567",
+          subtitle: "Mon-Fri 9AM-6PM EST"
+        },
+        {
+          icon: Mail,
+          title: "Email Us", 
+          details: "hello@qrmenumagic.com",
+          subtitle: "We respond within 4 hours"
+        },
+        // {
+        //   icon: MapPin,
+        //   title: "Visit Us",
+        //   details: "123 Digital Avenue, Tech City",
+        //   subtitle: "Schedule an appointment"
+        // },
+        // {
+        //   icon: Clock,
+        //   title: "Quick Turnaround",
+        //   details: "24-48 Hour Delivery",
+        //   subtitle: "Fast, professional service"
+        // }
+      ];
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
@@ -401,6 +426,46 @@ const Contact = () => {
               </form>
             </CardContent>
           </Card>
+          <div  className="space-y-8">
+             <div id="contact-info" className="grid sm:grid-cols-2 gap-6">
+               {contactInfo.map((info, index) => {
+                const Icon = info.icon;
+                return (
+                  <Card key={index} className="border-0 shadow-lg hover:shadow-secondary transition-smooth">
+                    <CardContent className="p-6 text-center">
+                      <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <Icon className="h-6 w-6 text-white" />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-2">{info.title}</h3>
+                      <p className="text-sm text-primary font-medium mb-1">{info.details}</p>
+                      <p className="text-xs text-muted-foreground">{info.subtitle}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+
+            {/* FAQ Quick Links */}
+            <Card className="border-0 shadow-lg gradient-secondary text-white">
+              <CardContent className="p-8">
+                <h3 className="font-display text-xl font-bold mb-4">Frequently Asked Questions</h3>
+                <div className="space-y-4 text-sm">
+                  <div>
+                    <strong>How long does it take?</strong>
+                    <p className="opacity-90">Most projects are completed within 24-48 hours.</p>
+                  </div>
+                  <div>
+                    <strong>Do you provide printing?</strong>
+                    <p className="opacity-90">Yes! We provide print-ready files and can arrange printing.</p>
+                  </div>
+                  {/* <div>
+                    <strong>Can you integrate with our POS?</strong>
+                    <p className="opacity-90">Absolutely! We work with all major POS systems.</p>
+                  </div> */}
+                </div>
+              </CardContent>
+            </Card>
+           </div>
         </div>
       </div>
     </section>

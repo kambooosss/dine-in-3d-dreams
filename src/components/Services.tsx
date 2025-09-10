@@ -2,7 +2,65 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Palette, QrCode, Sparkles, Zap, ArrowRight } from "lucide-react";
 
+import { useState } from "react";
+import WalkthroughModal, { Slide } from "@/components/WalkthroughModal";
+import step1 from "@/assets/menu-on-the-table.png";
+import step2 from "@/assets/scanning-menu.png";
+import step3 from "@/assets/seeing-menu-in-phone.png";
+import step4 from "@/assets/surfing-menu.png";
+
+import img1 from "@/assets/menuDesign/1.png";
+import img2 from "@/assets/menuDesign/2.png";
+import img3 from "@/assets/menuDesign/3.png";
+import img4 from "@/assets/menuDesign/4.png";
+import img5 from "@/assets/menuDesign/5.png";
+import img6 from "@/assets/menuDesign/6.png";
+import img7 from "@/assets/menuDesign/7.png";
+import img8 from "@/assets/menuDesign/8.png";
+import img9 from "@/assets/menuDesign/9.png";
+
+import img10 from "@/assets/menuDesign2/1.png";
+import img11 from "@/assets/menuDesign2/2.png";
+import img12 from "@/assets/menuDesign2/3.png";
+import img13 from "@/assets/menuDesign2/4.png";
+import img14 from "@/assets/menuDesign2/5.png";
+import img15 from "@/assets/menuDesign2/6.png";
+import img16 from "@/assets/menuDesign2/7.png";
+import img17 from "@/assets/menuDesign2/8.png";
+import img18 from "@/assets/menuDesign2/9.png";
+import img19 from "@/assets/menuDesign2/10.png";
+
+import img20 from "@/assets/menuDesign3/1.png";
+import img21 from "@/assets/menuDesign3/2.png";
+import img22 from "@/assets/menuDesign3/3.png";
+import img23 from "@/assets/menuDesign3/4.png";
+import img24 from "@/assets/menuDesign3/5.png";
+
+
+import GalleryModal from "@/components/GalleryModal";
+
+
+
+
 const Services = () => {
+  // inside Services component
+const [showWalk, setShowWalk] = useState(false);
+const [showGallery, setShowGallery] = useState(false);
+
+const slides: Slide[] = [
+  { src: step1, caption: "Step 1 — QR on the table", description: "QR code is placed on the table for scanning." },
+  { src: step2, caption: "Step 2 — Scan the QR", description: "Scan the QR with the phone camera." },
+  { src: step3, caption: "Step 3 — Menu appears", description: "Complete menu will be shown in the phone." },
+  { src: step4, caption: "Step 4 — Surf the Menu", description: "Surf the complete menu in your own pace." },
+];
+
+const galleryImages = [
+  img14, img4, img22, img1, img18, img6, img11, img20,
+  img8, img3, img16, img9, img24, img13, img7, img19,
+  img5, img21, img2, img12, img23, img17, img10,
+];
+
+
   const services = [
     {
       icon: Palette,
@@ -76,6 +134,14 @@ const Services = () => {
                     variant="outline" 
                     className="w-full border-primary text-primary hover:gradient-primary hover:text-white transition-smooth group"
                     disabled={index === 2}
+                    onClick={() => {
+                      if (index === 1) {
+                        setShowWalk(true); // open modal only for the 2nd card
+                      }
+                      if (index === 0) {
+                        setShowGallery(true); // 👈 open gallery modal for first card
+                      }
+                    }}
                   >
                     
                     {index === 2 ? "Comming Soon" : "Learn More" }
@@ -88,6 +154,13 @@ const Services = () => {
               </Card>
             );
           })}
+          <GalleryModal open={showGallery} onClose={() => setShowGallery(false)} images={galleryImages} />
+          <WalkthroughModal
+          open={showWalk}
+          onClose={() => setShowWalk(false)}
+          slides={slides}
+          />
+
         </div>
 
         {/* Call to Action */}
@@ -104,16 +177,34 @@ const Services = () => {
             <Button 
               size="lg"
               className="bg-white text-primary hover:bg-white/90 shadow-lg hover:shadow-xl transition-smooth"
+              // onClick={() => {
+              //   document.getElementById("contact-info")?.scrollIntoView({ behavior: "smooth" });
+              // }}
+              onClick={() => {
+                const el = document.getElementById("contact-info");
+                if (el) {
+                  const yOffset = -100; // adjust based on your navbar height
+                  const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+                  window.scrollTo({ top: y, behavior: "smooth" });
+
+                  // 👇 Add glowing effect after scrolling
+                  el.classList.add("animate-glow");
+                  setTimeout(() => {
+                    el.classList.remove("animate-glow");
+                  }, 3000); // remove after animation completes
+                }
+              }}
+              
             >
-              Start Your Project
+              Schedule Consultation
             </Button>
-            <Button 
+            {/* <Button 
               variant="outline" 
               size="lg"
               className="border-white text-white hover:bg-white hover:text-primary transition-smooth"
             >
               Schedule Consultation
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>
