@@ -8,17 +8,18 @@ import { useState } from "react";  // ✅ this line is required
 
 
 // Example images (replace with your real images)
-import ex1 from "@/assets/floating-food-items.png";
-import ex2 from "@/assets/floating-food-items.png";
-import ex3 from "@/assets/LOGO3.png";
-import ex4 from "@/assets/floating-food-items.png";
-import ex5 from "@/assets/floating-food-items.png";
-import ex6 from "@/assets/floating-food-items.png";
+import ex1 from "@/assets/scan_me/1.png";
+import ex2 from "@/assets/scan_me/2.png";
+import ex3 from "@/assets/scan_me/3.png";
+import ex4 from "@/assets/scan_me/4.png";
+import ex5 from "@/assets/scan_me/5.png";
+import ex6 from "@/assets/scan_me/6.png";
+import ex7 from "@/assets/scan_me/7.png";
 
 const Hero = () => {
   const [showGallery, setShowGallery] = useState(false);
 
-  const galleryImages = [ex1, ex2, ex3, ex4, ex5, ex6];
+  const galleryImages = [ex1, ex2, ex3, ex4, ex6, ex7];
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Gradient */}

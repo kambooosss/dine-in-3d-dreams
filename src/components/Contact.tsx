@@ -282,13 +282,13 @@ const Contact = () => {
         {
           icon: Phone,
           title: "Call Us",
-          details: "+1 (555) 123-4567",
-          subtitle: "Mon-Fri 9AM-6PM EST"
+          details: "9150431574 / 7330719394",
+          subtitle: "Mon-Sun 9AM-10PM EST"
         },
         {
           icon: Mail,
           title: "Email Us", 
-          details: "hello@qrmenumagic.com",
+          details: "contact.qrkaro@gmail.com",
           subtitle: "We respond within 4 hours"
         },
         // {
@@ -359,7 +359,7 @@ const Contact = () => {
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+91 "
                     />
                   </div>
                   <div className="space-y-2">

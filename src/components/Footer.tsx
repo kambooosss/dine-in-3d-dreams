@@ -29,8 +29,8 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Services</h3>
             <ul className="space-y-2 text-sm text-white/80">
               <li><a href="#" className="hover:text-white transition-smooth">QR Menu Design</a></li>
-              <li><a href="#" className="hover:text-white transition-smooth">Interactive Menus</a></li>
-              <li><a href="#" className="hover:text-white transition-smooth">Brand Integration</a></li>
+              {/* <li><a href="#" className="hover:text-white transition-smooth">Interactive Menus</a></li> */}
+              {/* <li><a href="#" className="hover:text-white transition-smooth">Brand Integration</a></li> */}
               {/* <li><a href="#" className="hover:text-white transition-smooth">POS Integration</a></li> */}
             </ul>
           </div>
@@ -41,8 +41,8 @@ const Footer = () => {
             <ul className="space-y-2 text-sm text-white/80">
               <li><a href="#" className="hover:text-white transition-smooth">About Us</a></li>
               {/* <li><a href="#" className="hover:text-white transition-smooth">Our Team</a></li> */}
-              <li><a href="#" className="hover:text-white transition-smooth">Case Studies</a></li>
-              <li><a href="#" className="hover:text-white transition-smooth">Blog</a></li>
+              {/* <li><a href="#" className="hover:text-white transition-smooth">Case Studies</a></li> */}
+              {/* <li><a href="#" className="hover:text-white transition-smooth">Blog</a></li> */}
             </ul>
           </div>
 
@@ -52,16 +52,16 @@ const Footer = () => {
             <div className="space-y-3 text-sm text-white/80">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>9150431574 / 7330719394</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>hello@qrkaro.com</span>
+                <span>contact.qrkaro@gmail.com</span>
               </div>
-              <div className="flex items-center space-x-2">
+              {/* <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
                 <span>123 Digital Avenue, Tech City</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -71,9 +71,9 @@ const Footer = () => {
             © 2024 QRKaro. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm text-white/80 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition-smooth">Privacy Policy</a>
+            {/* <a href="#" className="hover:text-white transition-smooth">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-smooth">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-smooth">Cookie Policy</a>
+            <a href="#" className="hover:text-white transition-smooth">Cookie Policy</a> */}
           </div>
         </div>
       </div>
